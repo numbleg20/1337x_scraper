@@ -92,8 +92,7 @@ internal class _1337x {
 			var infohash = htmlDocument.DocumentNode.SelectSingleNode(".//div[contains(@class, 'infohash-box')]/p/span");
 			var downloads = htmlDocument.DocumentNode.SelectSingleNode(".//div[contains(@class, 'clearfix')]/ul[3]/li[1]/span");
 			var language = htmlDocument.DocumentNode.SelectSingleNode(".//div[contains(@class, 'clearfix')]/ul[2]/li[3]/span");
-			var linkNode = htmlDocument.DocumentNode.SelectSingleNode(
-				"//a[contains(@class, 'torrentdown1')]");
+			var linkNode = htmlDocument.DocumentNode.SelectSingleNode("//a[contains(@class, 'torrentdown1')]");
 
 			torrentInfoz.DownloadUrl = linkNode.Attributes["href"].Value.Replace("&amp;", "&");
 			torrentInfoz.Infohash = infohash.InnerText.Trim();
