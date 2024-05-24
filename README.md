@@ -1,6 +1,9 @@
 1337x_scraper
 
 # Using
+!!!IMPORTANT!!!
+need install nuget package - Html Agility Pack
+
 **To get items from the search:**
 ```C#
 var torrents = await _1337x.GetAllFromSearch(/*request text*/);
