@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-struct torrentInfo {
+internal struct torrentInfo {
 	public string DownloadUrl;
 	public string Infohash;
 	public string Downloads;
 	public string Language;
 }
-struct torrent {
+internal struct torrent {
 	public string Name;
 	public string Uploader;
 	public string Link;
