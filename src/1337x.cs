@@ -28,10 +28,10 @@ internal class _1337x {
 			requestText = requestText.Substring(0, secondSpaceIndex);
 		}
 
-		var rutackerWindowsRequestLink = $"{_1337x_link}/category-search/{requestText}/Games/1/";
+		var siteRequestLink = $"{_1337x_link}/category-search/{requestText}/Games/1/";
 		try {
 			var httpClient = new HttpClient();
-			var html = await httpClient.GetStringAsync(rutackerWindowsRequestLink);
+			var html = await httpClient.GetStringAsync(siteRequestLink);
 			var htmlDocument = new HtmlDocument();
 			htmlDocument.LoadHtml(html);
 
