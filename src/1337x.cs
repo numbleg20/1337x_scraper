@@ -1,4 +1,4 @@
-﻿using HtmlAgilityPack;
+using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -24,7 +24,10 @@ internal class _1337x {
 	public static async Task<List<torrent>> GetAllFromSearch(string requestText) {
 		var newList = new List<torrent>();
 
-		requestText = requestText.Substring(0, requestText.IndexOf(' ', requestText.IndexOf(' ') + 1));
+		int secondSpaceIndex = requestText.IndexOf(' ', requestText.IndexOf(' ') + 1);
+		if (secondSpaceIndex != -1) {
+			requestText = requestText.Substring(0, secondSpaceIndex);
+		}
 
 		var rutackerWindowsRequestLink = $"{_1337x_link}/category-search/{requestText}/Games/1/";
 		try {
