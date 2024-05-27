@@ -1,8 +1,9 @@
 1337x_scraper
 
-# Using
-!!!IMPORTANT!!!
-need install nuget package - Html Agility Pack
+
+install nuget package - Html Agility Pack
+
+# Using 1337x
 
 **To get items from the search:**
 ```C#
@@ -51,4 +52,48 @@ Infohash: C73B061A1DFC31DAF8A1E6E412BE7F03A564CD3D
 Download Url: magnet:?xt=urn:btih:C73B061A1DFC31DAF8A1E6E412BE7F03A564CD3D&dn=Dishonored+2-STEAMPUNKS...
 Downloads: 10352
 Language: English
+```
+
+# Using gog
+
+**To get items from the search:**
+```C#
+var torrents = await gog.GetAllFromSearch(/*request text*/);
+Console.WriteLine("");
+
+foreach ( var torrent in torrents ) {
+  Console.WriteLine("Name: " + torrent.Name);
+  Console.WriteLine("Link: " + torrent.Link);
+  Console.WriteLine("");
+}
+```
+Output:
+```
+Request Text: dishonored
+
+Name: Dishonored: Complete Collection (Latest)
+Link: https://freegogpcgames.com/4547/4-dishonored-complete-collection-free-download/
+```
+<br>
+
+**To extract torrent information from a link to your page:**
+```C#
+var info = await gog.GetInfoFromLink(/*torrent page link*/);
+foreach(var inf in info) {
+  Console.WriteLine("Torrent Info:");
+  Console.WriteLine("Name: " + inf.Name);
+  Console.WriteLine("Image Link: " + inf.ImageLink);
+  Console.WriteLine("Download Link: " + inf.DownloadLink);
+  Console.WriteLine("");
+}
+```
+
+Output:
+```
+Torrent Page Link: https://freegogpcgames.com/4547/4-dishonored-complete-collection-free-download/
+
+Torrent Info:
+Name: Dishonored: Complete Collection (Latest)
+Image Link: https://i0.wp.com/uploads.freegogpcgames.com/image/Dishonored-Complete-Collection.jpg?resize=678%2C381&amp;ssl=1
+Download Link: magnet:?xt=urn:btih:794E2DDF32B0979E97987EAAE19A2...
 ```
