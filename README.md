@@ -84,6 +84,7 @@ foreach(var inf in info) {
   Console.WriteLine("Name: " + inf.Name);
   Console.WriteLine("Image Link: " + inf.ImageLink);
   Console.WriteLine("Download Link: " + inf.DownloadLink);
+  Console.WriteLine("Size: " + inf.Size);
   Console.WriteLine("");
 }
 ```
@@ -96,4 +97,5 @@ Torrent Info:
 Name: Dishonored: Complete Collection (Latest)
 Image Link: https://i0.wp.com/uploads.freegogpcgames.com/image/Dishonored-Complete-Collection.jpg?resize=678%2C381&amp;ssl=1
 Download Link: magnet:?xt=urn:btih:794E2DDF32B0979E97987EAAE19A2...
+Size: 141.2 GB
 ```
